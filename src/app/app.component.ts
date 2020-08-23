@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularTest';
+  userLoggedIn = true;
+
+  greet() {
+    alert('Hey there!');
+  }
 }
