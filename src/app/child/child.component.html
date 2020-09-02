@@ -4,4 +4,10 @@
 <p *ngIf = "loggedIn">Welcome!</p>
 <p *ngIf = "!loggedIn">Log in</p>
 
-<button (click)="callParentfuntion()">Greet</button>
+<div>
+    <div>Employee id: {{empData.employeeID}} </div>
+    <div>Name: {{empData.name}} </div>
+    <div>Employee id: {{empData.employeeID}} </div>
+    <div>Department: {{empData.dept}} </div>
+    <button (click)="callParentfuntion()">Greet</button>
+</div>

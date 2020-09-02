@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Employee } from '../employee';
 
 @Component({
   selector: 'app-child',
@@ -8,7 +9,8 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 export class ChildComponent implements OnInit {
 
   @Input() loggedIn: boolean;
-  @Output() greetEvent = new EventEmitter();
+  @Input() empData: Employee;
+  @Output() greetEvent = new EventEmitter<Employee>();
   // logginIn = true;
   constructor() { }
 
@@ -16,7 +18,7 @@ export class ChildComponent implements OnInit {
   }
 
   callParentfuntion() {
-    this.greetEvent.emit();
+    this.greetEvent.emit(this.empData);
   }
 
 }
