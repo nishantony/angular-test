@@ -10,6 +10,6 @@ export class AppComponent {
   userLoggedIn = true;
 
   greet() {
-    alert('Hey there!');
+    alert("Hey, I'm the parent");
   }
 }
