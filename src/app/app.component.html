@@ -1,2 +1,7 @@
 <h1>Parent component</h1>
-<app-child [loggedIn] = "userLoggedIn" (greetEvent)="greet()"></app-child>
+
+<div *ngFor="let emp of mockData">
+    <app-child [loggedIn] = "userLoggedIn" [employeeData]="emp" (sendEvent)="displayMessage($event)">
+    </app-child>
+</div>
+
